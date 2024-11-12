@@ -14,6 +14,10 @@
         /// </summary>
         public string Token { get; set; }
         /// <summary>
+        /// Email пользователя.
+        /// </summary>
+        public string Email { get; set; }
+        /// <summary>
         /// Время истечения срока токена.
         /// </summary>
         public DateTime expires_at { get; set; }

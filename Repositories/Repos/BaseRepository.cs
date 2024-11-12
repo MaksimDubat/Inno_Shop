@@ -10,10 +10,10 @@ namespace Inno_Shop.Repositories.Repos
     /// <typeparam name="TDbModel"></typeparam>
     public class BaseRepository<TDbModel> : IBaseRepository<TDbModel> where TDbModel : BaseModel
     {
-        private ApplicationContext context;
-        public BaseRepository(ApplicationContext _context) 
+        protected ApplicationContext context { get; set; }
+        public BaseRepository(ApplicationContext context)
         {
-            _context = _context ?? throw new ArgumentNullException(nameof(context));
+            this.context = context;
         }
         public TDbModel Creat(TDbModel model)
         {
